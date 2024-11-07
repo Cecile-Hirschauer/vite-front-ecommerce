@@ -1,10 +1,11 @@
-import AddCartButton from './features/cart/add-cart-product/ui/AddCartButton';
+import CartCount from './features/cart/display-cart-count/ui/CartCount';
 
 function App() {
-  const addToCart = (): void => {
-    alert('call API pour ajouter le produit au panier côté serveur');
-  };
-  return <AddCartButton addToCart={addToCart} />;
+  return (
+    <div className="mt-3">
+      <CartCount cartCount={3} />
+    </div>
+  );
 }
 
 export default App;
