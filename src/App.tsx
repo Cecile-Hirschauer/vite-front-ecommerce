@@ -1,19 +1,10 @@
-import AddCartButton from './features/cart/add-cart-product/ui/AddCartButton';
-import RemoveCartButton from './features/cart/remove-cart-product/ui/RemoveCartButton';
+import CartCount from './features/cart/display-cart-count/ui/CartCount';
 
 function App() {
-  const addToCart = (): void => {
-    alert('call API pour ajouter le produit au panier côté serveur');
-  };
-
-  const removeFromCart = (): void => {
-    alert('remove from cart');
-  };
   return (
-    <>
-      <AddCartButton addToCart={addToCart} />
-      <RemoveCartButton removeFromCart={removeFromCart} />
-    </>
+    <div className="mt-3">
+      <CartCount cartCount={3} />
+    </div>
   );
 }
 
