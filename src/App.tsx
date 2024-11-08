@@ -1,12 +1,11 @@
-import ProductSearch from './features/product/search-products/ui/ProductSearch';
+import Header from './common/layout/Header';
 
 function App() {
   const onSubmit = () => alert('Search');
-  return (
-    <div className="mt-3">
-      <ProductSearch onSubmit={onSubmit} />
-    </div>
-  );
+
+  const cartCount = 2;
+
+  return <Header onSubmit={onSubmit} cartCount={cartCount} />;
 }
 
 export default App;
