@@ -21,7 +21,7 @@ const ProductSearch = ({ onSubmit }: Props): ReactElement => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex w-full">
       <input
         type="text"
         id="product-search"
@@ -30,6 +30,7 @@ const ProductSearch = ({ onSubmit }: Props): ReactElement => {
         aria-label="Search product"
         value={search}
         onChange={handleChange}
+        className="w-full"
       />
       <IconButton type="submit" aria-label="search">
         <Search />
