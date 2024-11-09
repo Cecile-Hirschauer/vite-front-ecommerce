@@ -1,21 +1,38 @@
 import Header from './common/layout/Header';
-import ProductItem from './features/product/list-products/ui/ProductItem';
+
+import ProductList from './features/product/list-products/ui/ProductList';
+import { ProductItemData } from './features/product/list-products/ui/ProductList/types';
 
 function App() {
   const onSubmit = () => alert('Search');
 
   const cartCount = 2;
 
-  const product = {
-    name: 'Product Test',
-    picture: '',
-    price: 10,
-  };
+  const products: ProductItemData[] = [
+    {
+      id: '1',
+      name: 'Mobile phone',
+      picture: '',
+      price: 1000,
+    },
+    {
+      id: '2',
+      name: 'Laptop',
+      picture: '',
+      price: 1500,
+    },
+    {
+      id: '3',
+      name: 'Tablet',
+      picture: '',
+      price: 500,
+    },
+  ];
 
   return (
     <>
       <Header onSubmit={onSubmit} cartCount={cartCount} />
-      <ProductItem product={product} />
+      <ProductList products={products} />
     </>
   );
 }
