@@ -1,12 +1,9 @@
 import { Panorama } from '@mui/icons-material';
 import type { ReactElement } from 'react';
+import type { ProductItemData } from '../ProductList/types';
 
 type Props = {
-  product: {
-    name: string;
-    picture: string;
-    price: number;
-  };
+  product: Omit<ProductItemData, 'id'>;
 };
 
 const ProductItem = ({ product }: Props): ReactElement => {
